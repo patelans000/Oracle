@@ -201,7 +201,13 @@ function selectAnswer(effects) {
   currentQuestion++;
 
   if (currentQuestion < questions.length) {
-    showQuestion();
+    const quizLayout = document.querySelector(".quiz-layout");
+    quizLayout.classList.add("fading");
+    setTimeout(() => {
+      showQuestion();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      quizLayout.classList.remove("fading");
+    }, 300);
   } else {
     showResult();
   }

@@ -184,6 +184,11 @@ body {
   gap: 2rem;
   width: 100%;
   max-width: 1200px;
+  transition: opacity 0.3s ease;
+}
+
+.quiz-layout.fading {
+  opacity: 0;
 }
 
 .oracle-column {
